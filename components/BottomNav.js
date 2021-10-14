@@ -3,9 +3,13 @@ import { StyleSheet, View } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native"
 
 const BottomNav=()=>{
+
+    const navigation= useNavigation()
     return(
+        
         <View style={styles.container}>
             <AntDesign name="home" size={24} color="black" />
             <View style={styles.micContainer}>
@@ -27,7 +31,7 @@ const styles= StyleSheet.create({
     },
     microphone:{
         position:"absolute",
-        bottom:30,
+        bottom:10,
         left:-25,
         backgroundColor:"black",
         borderRadius:50,
