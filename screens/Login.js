@@ -25,7 +25,7 @@ export default function Login(){
                 <Image source={require("../assets/google.png")} style={styles.googleImage}/>
                 <Text style={styles.boldText}>Login with Gmail</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.appleButton}>
+            <TouchableOpacity onPress={handleHomeCart} style={styles.appleButton}>
                 <AntDesign name="apple1" size={20} color="white" />
                 <Text style={styles.whiteText}>Login with Apple</Text>
             </TouchableOpacity>

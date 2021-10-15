@@ -12,10 +12,14 @@ const BottomNav=()=>{
     const handleCheckout=()=>{
         navigation.navigate("CartList")
     }
+
+    const handleHome=()=>{
+        navigation.navigate("Home")
+    }
     return(
         
         <View style={styles.container}>
-            <AntDesign name="home" size={24} color="black" />
+            <AntDesign onPress={handleHome} name="home" size={24} color="black" />
             <View style={styles.micContainer}>
             <MaterialIcons style={styles.microphone} name="keyboard-voice" size={24} color="#fff" />
             </View>

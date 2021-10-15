@@ -7,6 +7,7 @@ import CartList from './screens/CartList';
 import HomeCart from './screens/HomeCart';
 import Login from "./screens/Login"
 import { createStackNavigator } from '@react-navigation/stack';
+import HeaderTitle from './components/HeaderTitle';
 
 
 const Stack= createStackNavigator()
@@ -24,18 +25,40 @@ export default function App() {
       <Stack.Navigator
       initialRouteName="Login"
        screenOptions={{
-          headerShown: false,
+        
           cardStyle: {
             backgroundColor: 'white'
           }
         }}>
-        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen 
+            name="Login" 
+            component={Login}
+            options={{
+              headerShown: false,
+             }
+             }
+          />
         <Stack.Screen 
         name="Home"
          component={HomeCart}
+         options={{
+          headerShown: false,
+         
+         }
+         }
          
           />
-        <Stack.Screen name="CartList" component={CartList} />
+        <Stack.Screen
+         name="CartList" 
+         component={CartList} 
+         options={{
+          headerTitleAlign: "center",
+          headerTitle:()=><HeaderTitle/>,
+          headerStyle:{
+            borderBottomWidth:0,
+          },
+         }}
+         />
       </Stack.Navigator>
     </NavigationContainer>
   );
