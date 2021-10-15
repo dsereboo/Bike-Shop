@@ -33,14 +33,15 @@ const CheckoutCard=()=>{
 
 const styles=StyleSheet.create({
     container:{
-        flex:1,
+        flex:1.2,
         flexDirection:"row",
         marginVertical:5,
+        width:200,
     },
     deleteIcon:{
         // padding:3,
         backgroundColor:"#fff",
-       
+        
        
     },
     boldText:{
@@ -61,7 +62,7 @@ const styles=StyleSheet.create({
     },
     quantity:{
         flexDirection:"row",
-        // justifyContent:"space-between",
+        justifyContent:"space-between",
         alignItems:"center"
     },
     greyText:{
@@ -76,9 +77,10 @@ const styles=StyleSheet.create({
     },
     row:{
         flexDirection:"row",
-        justifyContent:"space-between",
+        // // justifyContent:"space-between",
         alignItems:"center",
-        marginBottom:5
+
+        // marginBottom:5
        
     }
 })

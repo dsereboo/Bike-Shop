@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -8,14 +8,20 @@ import { useNavigation } from "@react-navigation/native"
 const BottomNav=()=>{
 
     const navigation= useNavigation()
+
+    const handleCheckout=()=>{
+        navigation.navigate("CartList")
+    }
     return(
         
         <View style={styles.container}>
             <AntDesign name="home" size={24} color="black" />
             <View style={styles.micContainer}>
             <MaterialIcons style={styles.microphone} name="keyboard-voice" size={24} color="#fff" />
-            </View>     
-            <SimpleLineIcons name="handbag" size={24} color="black" />
+            </View>
+            <Pressable onPress={handleCheckout}>     
+            <SimpleLineIcons  name="handbag" size={24} color="black" />
+            </Pressable>
         </View>
     )
 }
@@ -26,6 +32,7 @@ const styles= StyleSheet.create({
         justifyContent:"space-between",
         padding:15,
         borderRadius:10,
+        backgroundColor:"#f5f5f5"
 
 
     },

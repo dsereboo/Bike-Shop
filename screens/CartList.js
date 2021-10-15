@@ -122,8 +122,10 @@ const styles=StyleSheet.create({
          paddingBottom:7,
      },
      bikes:{
+        flex:2,
          marginTop:20,
          marginBottom:20,
+        
      }
 })
 

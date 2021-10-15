@@ -26,6 +26,7 @@ const HomeCart=()=>{
 
   return (
     <View style={styles.container}>
+      <View style={styles.spacing}>
       <View style={styles.header}>
         <FontAwesome5 name="grip-lines" size={24} color="black" />
         <MaterialIcons name="pedal-bike" size={32} color="black" />
@@ -73,6 +74,7 @@ const HomeCart=()=>{
           numColumns={2}
         />
       </View>
+      </View>
       <View style={styles.bottomNav}>
           <BottomNav/>
       </View>
@@ -85,6 +87,9 @@ const styles=StyleSheet.create({
     container:{
         flex:10,
         marginTop:20,
+        // marginHorizontal:20,
+    },
+    spacing:{
         marginHorizontal:20,
     },
     header:{
