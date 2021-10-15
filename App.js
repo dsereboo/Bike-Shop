@@ -21,17 +21,21 @@ const Stack= createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
+      <Stack.Navigator
+      initialRouteName="Login"
+       screenOptions={{
           headerShown: false,
-         
+          cardStyle: {
+            backgroundColor: 'white'
+          }
         }}>
+        <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen 
         name="Home"
          component={HomeCart}
          
           />
-        <Stack.Screen name="Cart List" component={CartList} />
-        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen name="CartList" component={CartList} />
       </Stack.Navigator>
     </NavigationContainer>
   );
