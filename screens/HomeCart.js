@@ -93,7 +93,7 @@ const styles=StyleSheet.create({
         marginHorizontal:20,
     },
     header:{
-        flex:0.1,
+        flex:0.7,
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center"
@@ -119,7 +119,7 @@ const styles=StyleSheet.create({
         color:"#ff7518"
     },
     pageDescription:{
-        flex:1,
+        flex:1.5,
     },
     boldText:{
         fontWeight:"bold",
@@ -129,10 +129,12 @@ const styles=StyleSheet.create({
         marginVertical:10,
     },
     bikes:{
-        flex:5,
+        flex:7,
     },
     bottomNav:{
-      flex:0.8,
+      flex:1,
+      justifyContent:"flex-end"
+
         
     }
 
